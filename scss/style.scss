@@ -1,0 +1,912 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600");
+
+// Colors
+$white: #fff;
+$lw-red: #ee3b23;
+$lw-indigo: #44a8de;
+$lw-deep-blue: #253237;
+$lw-steel-blue: #617d8a;
+$lw-blue: #455b64;
+$lw-salmon: #e84849;
+$lw-gravel-blue: #374851;
+$lw-off-white: #f1f3f4;
+$lw-orange: #f79523;
+$btn-border: #e82d2b;
+$gray: #8e8e8e;
+$font-gray: #b3b3b3;
+// With Opacity
+$op-white: rgba(255, 255, 255, 0.7);
+$op-blue: rgba(69, 90, 100, 0.96);
+$light-blue: rgba(69, 90, 100, 0.6);
+$light-gray: rgba(69, 90, 100, 0.4);
+$btn-red: rgba(236, 70, 70, 0.97);
+$btn-hover: rgba(237, 84, 84, 0.97);
+$gray-shadow: rgba(69, 90, 100, 0.3);
+$light-gray-shadow: rgba(69,90,100,0.1);
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+}
+
+// Type
+h1 {
+  color: $lw-off-white;
+  font-size: 1.5em;
+  line-height: 130%;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.2em;
+  line-height: 180%;
+  font-weight: 300;
+  color: $font-gray;
+}
+
+h3 {
+  color: $lw-gravel-blue;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 120%;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+h4 {
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 150%;
+  font-size: 1.2em;
+  color: $lw-blue;
+}
+
+p {
+  font-size: 1em;
+  text-align: center;
+  color: $gray;
+  line-height: 150%;
+  margin: 0;
+}
+
+// Links
+nav .tel {
+  font-size: 1em;
+  color: $lw-off-white;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 20px;
+  margin-right: 15px;
+  letter-spacing: 1px;
+}
+
+nav .contact-us {
+  margin: 0 10px;
+  text-align: center;
+  border: 1px solid $lw-off-white;
+  padding: 5px 20px;
+  color: $lw-off-white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 300;
+  transition: 0.15s ease-Out;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+// Seperators
+.line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: $gray;
+  border-radius: 50px;
+}
+
+.line.blue-line {
+  background-color: $lw-blue;
+}
+
+// Landing Page
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding: 30px 5% 30px 5%;
+  background-color: $lw-gravel-blue;
+}
+
+nav img {
+  width: 200px;
+}
+
+.contact-info {
+  display: none;
+}
+
+// Hide Skewed Container Overflow
+.header-container {
+  position: relative;
+}
+
+header {
+  width: 90%;
+  padding: 20px 5% 75px 5%;
+  background-color: $lw-gravel-blue;
+
+  // Slanted effect
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    background-color: inherit;
+    width: 100%;
+    height: 400px;
+    transform-origin: center;
+    transform: skewY(-10deg);
+    z-index: -1;
+  }
+
+  article {
+    width: 100%;
+  }
+  .header-art {
+    display: block;
+    width: 100%;
+
+    img {
+      display: none;
+    }
+  }
+}
+
+.client-steps {
+  display: block;
+  width: 90%;
+  padding: 100px 5% 150px 5%;
+}
+
+.step-block {
+  display: block;
+  width: 100%;
+  margin: 50px 0;
+
+  img {
+    display: block;
+    width: 100px;
+    margin: 20px auto;
+    box-shadow: 0 0 20px $light-gray-shadow;
+    border-radius: 50%;
+  }
+
+  a {
+    display: block;
+    text-align: center;
+    color: $lw-indigo;
+    padding: 2.5px 10px;
+    margin: 2.5px 0;
+  }
+}
+
+// Pricing container
+.package-pricing-information-container {
+  position: relative;
+}
+
+.package-pricing-information {
+  display: block;
+  width: 90%;
+  padding: 50px 5%;
+  background-color: $lw-off-white;
+
+  // Slanted effect
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: inherit;
+    width: 200%;
+    height: 400px;
+    transform-origin: center;
+    transform: skewY(-10deg);
+    z-index: -1;
+  }
+}
+
+// Pricing block wrapper
+#price-block-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  width: 100%;
+
+  ul {
+    li {
+      list-style-type: circle;
+      margin: 4px 0;
+      font-size: 1sem;
+      line-height: 150%;
+      color: rgba(86, 111, 123, 0.8);
+
+      ul {
+        padding-left: 10px;
+
+        li {
+          list-style-type: none;
+
+          &:before {
+            content: "+";
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.price-blocks {
+  display: block;
+  width: 100%;
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 0 0 50px $gray-shadow;
+  margin: 20px 0;
+  padding-bottom: 30px;
+
+  h3 {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 30px 0;
+  }
+
+  h4 {
+    text-align: left;
+    padding: 0 25px;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1em;
+  }
+}
+
+.price-title-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  padding: 0 5%;
+  height: 100px;
+  border-radius: 10px 10px 0 0;
+
+  h1 {
+    color: $white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+
+  h2 {
+    color: $op-white;
+    margin: 0;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    text-align: center;
+    line-height: 120%;
+    margin-top: 5px;
+  }
+}
+
+.price-amount {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0 10px 0;
+
+  p,
+  h2,
+  h3 {
+    padding: 0;
+    margin: 0;
+    line-height: 100%;
+  }
+
+  p {
+    font-size: 1em;
+    align-self: flex-start;
+    margin: 5px;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    align-self: flex-end;
+    margin: 7px;
+    font-weight: 400;
+  }
+}
+
+#marketing-pricing {
+  .price-title-flex-container {
+    background-color: #2666f0;
+  }
+
+  .price-amount h2,
+  h3,
+  p {
+    color: #2666f0;
+  }
+
+  h4 {
+    color: #2666f0;
+  }
+}
+
+#reviews-pricing {
+  .price-title-flex-container {
+    background-color: #4baef8;
+  }
+
+  .price-amount h2,
+  h3,
+  p {
+    color: #4baef8;
+  }
+
+  h4 {
+    color: #4baef8;
+  }
+}
+
+#web-pricing {
+  .price-title-flex-container {
+    background-color: #ee6337;
+  }
+
+  .price-amount h2,
+  h3,
+  p {
+    color: #ee6337;
+  }
+
+  h4 {
+    color: #ee6337;
+  }
+}
+
+.client-testimonial {
+  width: 90%;
+  padding: 50px 5% 100px 5%;
+  background-color: $white;
+
+  .testimony-text {
+    text-align: left;
+    margin: 50px 0 25px 0;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  img {
+    margin: 20px 0 10px 0;
+    width: 80%;
+  }
+}
+
+// Footer
+footer {
+  width: 90%;
+  padding: 30px 5%;
+  background-color: $lw-deep-blue;
+
+  .web-link {
+    display: none;
+  }
+
+  a {
+    font-weight: 300;
+    text-transform: uppercase;
+    display: block;
+    color: $gray;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  h3 {
+    text-align: left;
+  }
+
+  p {
+    text-align: left;
+  }
+
+  a.inline-links {
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  header {
+    // Slanted effect
+    &:after {
+      bottom: -70px;
+      transform: skewY(-10deg);
+    }
+  }
+
+  .client-steps {
+    padding: 150px 5% 150px 5%;
+  }
+
+  .step-block {
+    width: 80%;
+
+    img {
+      display: block;
+      width: 100px;
+      margin: 20px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  
+  .step-block {
+    width: 60%;
+  }
+  
+}
+
+@media screen and (min-width: 800px) {
+  h4 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  nav {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav img {
+    width: 200px;
+  }
+
+  .contact-info {
+    display: block;
+  }
+
+  header {
+    // Slanted effect
+    &:after {
+      bottom: -100px;
+      transform: skewY(-5deg);
+    }
+
+    article {
+      width: 80%;
+    }
+  }
+
+  .client-steps {
+    padding: 150px 5% 100px 5%;
+  }
+
+  .package-pricing-information {
+    // Slanted effect
+    &:before {
+      transform: skewY(-5deg);
+    }
+  }
+  
+  .price-blocks {
+    width: 60%;
+  }
+
+  .client-testimonial {
+    img {
+      width: 50%;
+    }
+  }
+  
+  footer {
+    display: block;
+    .footer-links {
+      a {
+        display: inline-block;
+        padding: 5px;
+      }
+      a.web-link {
+        display: inline-block;
+        margin-right: 50px;
+        text-transform: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  header {
+    article {
+      width: 70%;
+    }
+
+    .header-art {
+      display: block;
+      width: 100%;
+
+      img {
+        display: block;
+        width: 75%;
+        position: absolute;
+        left: 4%;
+        margin-top: 25px;
+      }
+    }
+  }
+
+  .client-steps {
+    padding: 500px 5% 200px 5%;
+  }
+
+  .step-block {
+    width: 50%;
+
+    img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .client-testimonial {
+    .testimony-text {
+      width: 50%;
+    }
+
+    img {
+      width: 400px;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .client-steps {
+    padding: 550px 5% 200px 5%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 1.5em;
+    line-height: 150%;
+  }
+  
+  h4 {
+    font-size: 1.8em;
+    width: 45%;
+  }
+
+  header {
+    article {
+      width: 50%;
+    }
+
+    .header-art {
+      img {
+        width: 55%;
+        margin-top: 50px;
+      }
+    }
+  }
+  
+  .client-steps {
+    padding: 500px 5% 200px 5%;
+  }
+  
+  .step-block {
+    width: 40%;
+    
+    img {
+      width: 60px;
+    }
+  }
+  
+  #price-block-wrapper {
+    width: 50%;
+    
+    ul {
+      padding-left: 50px;
+      
+      li {
+        font-weight: 300;
+        line-height: 120%;
+        font-size: .9em;
+        
+        ul {
+          li {
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+  
+  .price-blocks {
+    width: 85%;
+    
+    h4 {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  
+  header {
+    
+    article {
+      width: 40%;
+    }
+    
+    .header-art {
+      img {
+        width: 55%;
+      }
+    }
+  }
+  
+  .client-steps {
+    padding: 500px 5% 200px 5%;
+  }
+  
+}
+
+@media screen and (min-width: 1400px) {
+  
+  .client-steps {
+    width: 85%;
+    padding: 550px 5% 250px 7.5%;
+  }
+  
+  .step-block {
+    width: 40%;
+    margin: 50px 0;
+  }
+  
+  .price-blocks {
+    width: 70%;
+  }
+  
+}
+
+@media screen and (min-width: 1500px) {
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  p {
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+  
+  header {
+    padding: 75px 5% 150px 5%;
+    
+    article {
+      width: 45%;
+    }
+  }
+  
+  .step-block {
+    width: 30%;
+  }
+  
+  #price-block-wrapper {
+    width: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    padding-bottom: 300px;
+  }
+  
+  .price-blocks {
+    width: 49%;
+    margin-bottom: 0;
+  }
+  
+  #web-pricing {
+    position: absolute;
+    width: 49%;
+    right: 0;
+    bottom: 60px;
+  }
+  
+}
+
+@media screen and (min-width: 1700px) {
+  
+  .client-steps {
+    padding: 600px 5% 250px 7.5%;
+  }
+  
+    #price-block-wrapper {
+    
+    ul {
+      padding-left: 60px;
+    }
+  }
+  
+}
+
+@media screen and (min-width: 1800px) {
+  
+  .client-steps {
+    padding: 650px 5% 250px 7.5%;
+  }
+  
+}
+
+@media screen and (min-width: 1900px) {
+  
+  h4 {
+    width: 25%;
+  }
+  
+  nav {
+    width: 80%;
+    padding: 30px 10%;
+  }
+  
+  header {
+    width: 80%;
+    padding: 75px 10% 150px 10%;
+    
+    article {
+      width: 40%;
+    }
+    
+    .header-art {
+    
+    img {
+      width: 45%;
+      left: 9%;
+    }
+  }
+  }
+  
+  .client-steps {
+    width: 80%;
+    padding: 550px 10% 250px 10%;
+  }
+  
+  .package-pricing-information {
+    width: 80%;
+    padding: 50px 10%;
+  }
+  
+  .client-testimonial {
+    width: 80%;
+    padding: 50px 10% 100px 10%;
+  }
+  
+  footer {
+    width: 80%;
+    padding: 30px 10%;
+  }
+  
+}
+
+@media screen and (min-width: 2000px) {
+  
+  #price-block-wrapper {
+    width: 50%;
+  }
+  
+}
+
+@media screen and (min-width: 2150px) {
+  
+  .client-steps {
+    padding: 600px 10% 250px 10%;
+  }
+  
+}
+
+@media screen and (min-width: 2300px) {
+  
+    nav {
+    width: 70%;
+    padding: 30px 15%;
+  }
+  
+  header {
+    width: 70%;
+    padding: 75px 15% 150px 15%;
+    // Slanted effect
+    &:after {
+      bottom: -150px;
+      transform: skewY(-5deg);
+    }
+    
+    article {
+      width: 35%;
+    }
+    
+    .header-art {
+    
+    img {
+      width: 40%;
+      left: 14%;
+    }
+  }
+  }
+  
+  .client-steps {
+    width: 70%;
+    padding: 650px 15% 250px 15%;
+  }
+  
+  .package-pricing-information {
+    width: 70%;
+    padding: 50px 15%;
+  }
+  
+  .client-testimonial {
+    width: 70%;
+    padding: 50px 15% 100px 15%;
+  }
+  
+  footer {
+    width: 70%;
+    padding: 30px 15%;
+  }
+  
+}
+
+@media screen and (min-width: 2500px) {
+  
+  #price-block-wrapper {
+    width: 45%;
+  }
+  
+}
