@@ -231,7 +231,7 @@ header .header-art img {
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 50px rgba(69, 90, 100, 0.3);
+  box-shadow: 0 0 50px rgba(69, 90, 100, 0.2);
   margin: 20px 0;
   padding-bottom: 30px;
 }
